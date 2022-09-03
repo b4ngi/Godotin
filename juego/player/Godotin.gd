@@ -20,11 +20,13 @@ var vector_snap: Vector3 = Vector3.DOWN
 var salto_interrumpido = false
 var saltando = false
 var cayendo = false
+var disparando = false
 
 ## Atributos onready
 onready var brazo_camara: SpringArm = $BrazoCamara
 onready var armadura: Spatial = $Armadura
 onready var arbol_animacion: AnimationTree = $ArbolDeAnimacion
+onready var linterna: SpotLight = $Linterna
 
 ## Metodos
 func _process(_delta: float) -> void:
@@ -38,12 +40,19 @@ func _physics_process(_delta: float) -> void:
 	var direccion_vista_player = Vector2(movimiento.z, movimiento.x)
 	if direccion_vista_player.length() > 0:
 		armadura.rotation.y = direccion_vista_player.angle()
+	
+	if disparando:
+		linterna.rotation.y = armadura.rotation.y - 3.14159
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("disparar"):
 		arbol_animacion.set_mezcla_disparar(1)
+		disparando = true
+		linterna.light_energy = 15
 	elif event.is_action_released("disparar"):
 		arbol_animacion.set_mezcla_disparar(0)
+		disparando = false
+		linterna.light_energy = 0
 
 ## Metodos custom
 func movimiento_vertical() -> void:
