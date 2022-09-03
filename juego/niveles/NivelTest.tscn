@@ -21,17 +21,17 @@ extents = Vector3( 25, 0.001, 25 )
 
 [node name="NivelTest" type="Node"]
 
+[node name="Player" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.345011, 0 )
+
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.866025, -0.25, -0.433013, -7.57103e-08, -0.866025, 0.5, -0.5, 0.433013, 0.75, 0, 7.27282, 0 )
 light_color = Color( 0.992157, 1, 0, 1 )
 light_energy = 1.5
 shadow_enabled = true
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.920961, 0.389654, 0, -0.389654, 0.920961, 0, 3.53976, 5.63764 )
-
 [node name="Suelo" type="StaticBody" parent="."]
-collision_layer = 4
+collision_layer = 0
 
 [node name="MeshInstance" type="MeshInstance" parent="Suelo"]
 mesh = SubResource( 2 )
@@ -663,8 +663,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.2, 25 )
 
 [node name="ColumnaBloques48" parent="Bordes/Oeste" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.2, 25 )
-
-[node name="Player" parent="." instance=ExtResource( 3 )]
 
 [node name="Bloques" type="Spatial" parent="."]
 

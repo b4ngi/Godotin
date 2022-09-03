@@ -7,7 +7,6 @@
 
 [node name="BloqueCesped" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
-collision_layer = 4
 
 [node name="BloqueTierra" parent="." instance=ExtResource( 1 )]
 
