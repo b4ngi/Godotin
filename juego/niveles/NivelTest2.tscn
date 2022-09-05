@@ -11,11 +11,11 @@
 [ext_resource path="res://juego/items/MonedaDorada.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=10]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
-[ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=12]
-[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=13]
+[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
+[ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.0941176, 0.290196, 0.278431, 1 )
+albedo_color = Color( 0.27451, 0.0823529, 0.247059, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
@@ -25,9 +25,9 @@ size = Vector2( 50, 50 )
 extents = Vector3( 25, 0.001, 25 )
 
 [node name="NivelTest" type="Node"]
-script = ExtResource( 13 )
-numero_nivel = 1
-proximo_nivel = "res://juego/niveles/NivelTest2.tscn"
+script = ExtResource( 12 )
+numero_nivel = 2
+proximo_nivel = "res://juego/niveles/NivelTest.tscn"
 
 [node name="HUD" parent="." instance=ExtResource( 11 )]
 
@@ -705,5 +705,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.5396 )
 [node name="Sierra" parent="." instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2 )
 
-[node name="Portal" parent="." instance=ExtResource( 12 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 10.5 )
+[node name="Portal" parent="." instance=ExtResource( 13 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 13 )
