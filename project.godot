@@ -52,6 +52,8 @@ config/icon="res://godotin_icono.png"
 
 Eventos="*res://juego/autoloads/Eventos.gd"
 DatosJuego="*res://juego/autoloads/DatosJuego.gd"
+DatosConfiguracion="*res://juego/autoloads/DatosConfiguracion.gd"
+CargaSegundoPlano="*res://juego/autoloads/CargaSegundoPlano.tscn"
 
 [display]
 
