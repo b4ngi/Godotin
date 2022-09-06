@@ -5,8 +5,8 @@ extends Control
 export (String, FILE, "*.tscn") var menu_inicial = ""
 
 ## Atributos onready
-onready var boton_pantalla_completa: CheckBox = $PanelPrincipal/ContenedorPrincipal/PantallaCompleta
-onready var opcion_resoluciones: OptionButton = $PanelPrincipal/ContenedorPrincipal/Resolucion/OpcionResolucion
+onready var boton_pantalla_completa: CheckBox = $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/PantallaCompleta
+onready var opcion_resoluciones: OptionButton = $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/Resolucion/OpcionResolucion
 onready var resoluciones: Dictionary = {
 	"640 x 480": Vector2(640, 480),
 	"960 x 640": Vector2(960, 640),
@@ -21,9 +21,9 @@ onready var bus_indices = {
 	"SFX": AudioServer.get_bus_index("SFX")
 }
 onready var bus_etiquetas = {
-	"Master": $PanelPrincipal/ContenedorPrincipal/VolumenGeneral/NivelVolumen,
-	"Musica": $PanelPrincipal/ContenedorPrincipal/VolumenMusica/NivelVolumen,
-	"SFX": $PanelPrincipal/ContenedorPrincipal/VolumenSFX/NivelVolumen
+	"Master": $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenGeneral/NivelVolumen,
+	"Musica": $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenMusica/NivelVolumen,
+	"SFX": $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/VolumenSFX/NivelVolumen
 }
 
 
