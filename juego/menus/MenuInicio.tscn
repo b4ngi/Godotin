@@ -93,6 +93,7 @@ text = "SALIR"
 [node name="BotonSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[connection signal="pressed" from="ContenedorPrincipal/BotonCargar" to="." method="_on_BotonCargar_pressed"]
 [connection signal="pressed" from="ContenedorPrincipal/BotonNuevo" to="." method="_on_BotonNuevo_pressed"]
 [connection signal="pressed" from="ContenedorPrincipal/BotonOpciones" to="." method="_on_BotonOpciones_pressed"]
 [connection signal="pressed" from="ContenedorPrincipal/BotonSalir" to="." method="_on_BotonSalir_pressed"]

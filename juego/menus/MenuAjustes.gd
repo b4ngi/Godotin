@@ -77,6 +77,8 @@ func cambiar_volumen(indice_bus: int, subir: bool) -> void:
 
 ## Seniales internas
 func _on_BotonRegresar_pressed() -> void:
+	var guardar: GuardarCargar = GuardarCargar.new()
+	guardar.guardar_datos_configuracion()
 	get_tree().change_scene(menu_inicial)
 
 func _on_PantallaCompleta_toggled(button_pressed: bool) -> void:
