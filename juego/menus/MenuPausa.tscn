@@ -3,13 +3,12 @@
 [ext_resource path="res://recursos/fuentes/Kenney Mini Square.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://recursos/fuentes/BotonesMenu.tres" type="DynamicFont" id=2]
 [ext_resource path="res://juego/menus/MenuPausa.gd" type="Script" id=3]
+[ext_resource path="res://recursos/botones/BotonNormal.tres" type="StyleBox" id=4]
+[ext_resource path="res://recursos/botones/BotonSalirNormal.tres" type="StyleBox" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
 font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.541176, 0.152941, 0.152941, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 35
@@ -17,9 +16,6 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.541176, 0.152941, 0.152941, 1 )
-
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.231373, 0.0509804, 0.0509804, 1 )
 
 [node name="MenuPausa" type="Control"]
 pause_mode = 2
@@ -60,7 +56,7 @@ margin_bottom = 93.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 1 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/normal = ExtResource( 4 )
 text = "Continuar"
 
 [node name="BotonMenu" type="Button" parent="Panel/VBoxContainer"]
@@ -85,7 +81,7 @@ margin_bottom = 295.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = ExtResource( 2 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/normal = ExtResource( 5 )
 text = "Salir"
 
 [connection signal="pressed" from="Panel/VBoxContainer/BotonContinuar" to="." method="_on_BotonContinuar_pressed"]
