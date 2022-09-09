@@ -6,6 +6,7 @@ export(String, FILE, "*.tscn") var menu_inicio = ""
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	nivel_actual = DatosJuego.nivel_actual
+	DatosJuego.primera_vez_nivel = true
 	print("hola")
 	DatosJuego.reset()
 

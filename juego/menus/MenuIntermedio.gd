@@ -11,6 +11,7 @@ func _ready() -> void:
 	titulo.text = "NIVEL {num} COMPLETO".format({"num": DatosJuego.num_nivel_actual})
 	puntos.text = "{puntos}\n PUNTOS TOTALES".format({"puntos": DatosJuego.generar_puntaje()})
 	DatosJuego.nivel_actual = DatosJuego.nivel_proximo
+	DatosJuego.num_nivel_actual += 1
 
 func _on_BotonNivel_pressed() -> void:
 # warning-ignore:return_value_discarded

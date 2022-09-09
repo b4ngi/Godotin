@@ -58,6 +58,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = ExtResource( 4 )
+disabled = true
 text = "CARGAR"
 
 [node name="BotonNuevo" type="Button" parent="ContenedorPrincipal"]

@@ -22,9 +22,7 @@ func cargar_hilo(nivel: String) -> void:
 	var recurso_interactivo: ResourceInteractiveLoader = ResourceLoader.load_interactive(nivel)
 	var total_partes: int = recurso_interactivo.get_stage_count()
 	barra_progreso.max_value = total_partes
-	
-	print(barra_progreso.max_value)
-	
+
 	var resultado: int = OK
 	var recurso: Resource = null
 	
@@ -52,6 +50,7 @@ func carga_completa(recurso: Resource) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if puede_iniciar:
+		DatosJuego.primera_vez_nivel = true
 		get_tree().current_scene.queue_free()
 		get_tree().current_scene = null
 		get_tree().root.add_child(escena_precargada)

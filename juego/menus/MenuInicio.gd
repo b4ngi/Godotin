@@ -24,6 +24,7 @@ func _on_BotonNuevo_pressed() -> void:
 	var borrar: GuardarCargar = GuardarCargar.new()
 	borrar.borrar_datos_juego() #
 	DatosJuego.nivel_actual = nivel_inicial
+	DatosJuego.num_nivel_actual = 1
 	DatosJuego.reset()
 	get_tree().change_scene(pantalla_carga)
 

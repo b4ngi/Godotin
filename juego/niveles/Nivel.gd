@@ -7,10 +7,13 @@ export(String, FILE, "*.tscn") var proximo_nivel = ""
 export(String, FILE, "*.tscn") var menu_game_over = ""
 
 func _ready():
+	if DatosJuego.primera_vez_nivel:
+		$ColorRect/Label.text = "Nivel %s" %DatosJuego.num_nivel_actual
+		$ColorRect/AnimationPlayer.play("fade_out")
+		DatosJuego.primera_vez_nivel = false
+		yield(get_tree().create_timer(4.0), "timeout")
+	$ColorRect.queue_free()
 	Eventos.connect("game_over", self, "game_over")
-	print("antes")
-	yield(get_tree().create_timer(4.0), "timeout")
-	print("despues")
 	actualizar_datos()
 	var guardar: GuardarCargar = GuardarCargar.new() #
 	guardar.guardar_datos_juego() #

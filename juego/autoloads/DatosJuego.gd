@@ -8,6 +8,7 @@ var nivel_actual: String = ""
 var num_nivel_actual: int = 0
 var nivel_proximo: String = ""
 var puntaje: int = 0
+var primera_vez_nivel: bool = false
 
 ## Metodos custom
 func reset() -> void:
