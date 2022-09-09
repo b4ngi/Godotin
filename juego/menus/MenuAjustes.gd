@@ -1,8 +1,9 @@
 # MenuAjustes.gd
+class_name MenuAjustes
 extends Control
 
 ## Atributos export
-export (String, FILE, "*.tscn") var menu_inicial = ""
+export (String, FILE, "*.tscn") var  menu_inicio = ""
 
 ## Atributos onready
 onready var boton_pantalla_completa: CheckBox = $ContenedorTabulador/AudioVideo/PanelPrincipal/ContenedorPrincipal/PantallaCompleta
@@ -79,7 +80,7 @@ func cambiar_volumen(indice_bus: int, subir: bool) -> void:
 func _on_BotonRegresar_pressed() -> void:
 	var guardar: GuardarCargar = GuardarCargar.new()
 	guardar.guardar_datos_configuracion()
-	get_tree().change_scene(menu_inicial)
+	get_tree().change_scene(menu_inicio)
 
 func _on_PantallaCompleta_toggled(button_pressed: bool) -> void:
 	OS.window_fullscreen = button_pressed
