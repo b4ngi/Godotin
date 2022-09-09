@@ -1,11 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://recursos/fuentes/Kenney Future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://juego/menus/MenuInicio.gd" type="Script" id=2]
 [ext_resource path="res://recursos/audio/sfx/select_2.wav" type="AudioStream" id=3]
+[ext_resource path="res://recursos/botones/BotonNormal.tres" type="StyleBox" id=4]
+[ext_resource path="res://recursos/botones/BotonSalirNormal.tres" type="StyleBox" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-size = 55
+size = 80
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -19,7 +21,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 2 )
 menu_ajustes = "res://juego/menus/MenuAjustes.tscn"
-nivel_inicial = "res://juego/niveles/NivelTest.tscn"
+nivel_inicial = "res://juego/niveles/Nivel1.tscn"
 pantalla_carga = "res://juego/menus/PantallaCarga.tscn"
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -30,10 +32,10 @@ color = Color( 0, 0, 0, 1 )
 [node name="Titulo" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -144.0
-margin_top = 96.0
-margin_right = 144.0
-margin_bottom = 159.0
+margin_left = -214.5
+margin_top = 55.0
+margin_right = 214.5
+margin_bottom = 145.0
 custom_fonts/font = SubResource( 1 )
 text = "GODOTIN"
 align = 1
@@ -55,6 +57,7 @@ margin_bottom = 85.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+custom_styles/normal = ExtResource( 4 )
 text = "CARGAR"
 
 [node name="BotonNuevo" type="Button" parent="ContenedorPrincipal"]
@@ -64,6 +67,7 @@ margin_bottom = 174.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+custom_styles/normal = ExtResource( 4 )
 text = "NUEVO"
 
 [node name="BotonOpciones" type="Button" parent="ContenedorPrincipal"]
@@ -73,6 +77,7 @@ margin_bottom = 263.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+custom_styles/normal = ExtResource( 4 )
 text = "OPCIONES"
 
 [node name="HSeparator" type="HSeparator" parent="ContenedorPrincipal"]
@@ -87,6 +92,7 @@ margin_bottom = 360.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 2 )
+custom_styles/normal = ExtResource( 5 )
 text = "SALIR"
 
 [node name="BotonSFX" type="AudioStreamPlayer" parent="."]

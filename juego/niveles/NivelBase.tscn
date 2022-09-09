@@ -1,21 +1,14 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://juego/bloques/ColumnaBloques.tscn" type="PackedScene" id=1]
-[ext_resource path="res://juego/bloques/BloqueCespedLargo.tscn" type="PackedScene" id=2]
 [ext_resource path="res://juego/player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://juego/bloques/MedioBloqueCesped.tscn" type="PackedScene" id=4]
-[ext_resource path="res://juego/bloques/BloqueCespedFinal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://juego/bloques/BloquePendiente.tscn" type="PackedScene" id=6]
-[ext_resource path="res://juego/bloques/BloquePendienteMedia.tscn" type="PackedScene" id=7]
-[ext_resource path="res://juego/bloques/BloqueHexagono.tscn" type="PackedScene" id=8]
-[ext_resource path="res://juego/items/MonedaDorada.tscn" type="PackedScene" id=9]
-[ext_resource path="res://juego/objetos/danio/Sierra.tscn" type="PackedScene" id=10]
 [ext_resource path="res://juego/interfaz/HUD.tscn" type="PackedScene" id=11]
-[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=12]
-[ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://juego/objetos/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://juego/niveles/Nivel.gd" type="Script" id=13]
+[ext_resource path="res://juego/menus/MenuPausa.tscn" type="PackedScene" id=14]
 
 [sub_resource type="SpatialMaterial" id=1]
-albedo_color = Color( 0.27451, 0.0823529, 0.247059, 1 )
+albedo_color = Color( 0.0941176, 0.290196, 0.278431, 1 )
 
 [sub_resource type="PlaneMesh" id=2]
 material = SubResource( 1 )
@@ -24,12 +17,13 @@ size = Vector2( 50, 50 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 25, 0.001, 25 )
 
-[node name="NivelTest" type="Node"]
-script = ExtResource( 12 )
-numero_nivel = 2
-proximo_nivel = "res://juego/niveles/NivelTest.tscn"
+[node name="NivelBase" type="Node"]
+script = ExtResource( 13 )
 
 [node name="HUD" parent="." instance=ExtResource( 11 )]
+
+[node name="MenuPausa" parent="." instance=ExtResource( 14 )]
+visible = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.154989, 0 )
@@ -676,34 +670,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.2, 25 )
 
 [node name="Bloques" type="Spatial" parent="."]
 
-[node name="BloqueLargo" parent="Bloques" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 0 )
-
-[node name="MedioBloqueCesped" parent="Bloques" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
-
-[node name="BloqueCespedFinal" parent="Bloques" instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1 )
-
-[node name="BloquePendiente" parent="Bloques" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2 )
-
-[node name="BloquePendienteMedia" parent="Bloques" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.5, 1 )
-
-[node name="BloqueHexagono" parent="Bloques" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3 )
-
 [node name="ContenedorMonedas" type="Node" parent="."]
 
-[node name="MonedaDorada" parent="ContenedorMonedas" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.5, 4.5396 )
+[node name="ContenedorSierras" type="Node" parent="."]
 
-[node name="MonedaDorada2" parent="ContenedorMonedas" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 4.5396 )
-
-[node name="Sierra" parent="." instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 2 )
-
-[node name="Portal" parent="." instance=ExtResource( 13 )]
-transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 13 )
+[node name="Portal" parent="." instance=ExtResource( 12 )]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 10.5 )

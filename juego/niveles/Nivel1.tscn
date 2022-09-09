@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://juego/niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/items/MonedaDorada.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/bloques/MedioBloqueCesped.tscn" type="PackedScene" id=3]
+
+[node name="Nivel1" instance=ExtResource( 1 )]
+numero_nivel = 1
+proximo_nivel = "res://juego/niveles/Nivel2.tscn"
+menu_game_over = "res://juego/menus/MenuGameOver.tscn"
+
+[node name="Player" parent="." index="2"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.154989, -10.5 )
+
+[node name="MedioBloqueCesped" parent="Bloques" index="0" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7 )
+
+[node name="MonedaDorada" parent="ContenedorMonedas" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6 )
+
+[node name="MonedaDorada2" parent="ContenedorMonedas" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, -3.5 )
+
+[node name="Portal" parent="." index="9"]
+transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 4 )
