@@ -30,6 +30,4 @@ func game_over():
 # warning-ignore:return_value_discarded
 	get_tree().current_scene.queue_free()
 	get_tree().current_scene = null
-	#get_tree().root.add_child(menu_game_over)
-	#get_tree().current_scene = menu_game_over
 	get_tree().change_scene(menu_game_over)

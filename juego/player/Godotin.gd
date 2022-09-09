@@ -103,9 +103,10 @@ func tomar_direccion() -> Vector3:
 	return direccion
 
 func respawn() -> void:
-	DatosJuego.restar_vidas()
+	var continua_el_juego = DatosJuego.restar_vidas()
 # warning-ignore:return_value_discarded
-	get_tree().reload_current_scene()
+	if continua_el_juego:
+		get_tree().reload_current_scene()
 
 func _ready():
 	pass # Replace with function body.

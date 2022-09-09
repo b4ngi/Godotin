@@ -4,9 +4,9 @@ var nivel_actual = ""
 export(String, FILE, "*.tscn") var menu_inicio = ""
 
 func _ready():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	nivel_actual = DatosJuego.nivel_actual
 	print("hola")
-	#get_tree().root.add_child(self)
 	DatosJuego.reset()
 
 func _on_BotonReintentar_pressed():

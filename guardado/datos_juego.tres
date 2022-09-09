@@ -4,8 +4,8 @@
 
 [resource]
 script = ExtResource( 1 )
-vidas = 1
-monedas_oro = 0
+vidas = 3
+monedas_oro = 3
 nivel_actual = "res://juego/niveles/NivelTest.tscn"
 num_nivel_actual = 1
 nivel_proximo = "res://juego/niveles/NivelTest2.tscn"

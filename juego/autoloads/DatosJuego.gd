@@ -20,12 +20,14 @@ func generar_puntaje() -> int:
 	puntaje = valor_oro
 	return puntaje
 
-func restar_vidas() -> void:
+func restar_vidas() -> bool:
 	vidas -= 1
 	if vidas == 0:
 		Eventos.emit_signal("game_over")
+		return false
 	
 	Eventos.emit_signal("actualizar_hud")
+	return true
 
 func sumar_monedas():
 	monedas_oro += 1
