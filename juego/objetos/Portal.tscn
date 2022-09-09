@@ -24,6 +24,7 @@ height = 0.542471
 
 [node name="Portal" type="Area"]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0 )
+collision_layer = 0
 script = ExtResource( 2 )
 proximo_nivel = "res://juego/menus/MenuIntermedio.tscn"
 
