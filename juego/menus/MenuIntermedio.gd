@@ -15,4 +15,7 @@ func _ready() -> void:
 
 func _on_BotonNivel_pressed() -> void:
 # warning-ignore:return_value_discarded
-	get_tree().change_scene(pantalla_carga)
+	if DatosJuego.nivel_proximo == "res://juego/menus/MenuVictoria.tscn":
+		get_tree().change_scene("res://juego/menus/MenuVictoria.tscn")
+	else:
+		get_tree().change_scene(pantalla_carga)

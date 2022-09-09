@@ -8,6 +8,7 @@
 
 [node name="Nivel2" instance=ExtResource( 3 )]
 numero_nivel = 2
+proximo_nivel = "res://juego/niveles/Nivel3.tscn"
 menu_game_over = "res://juego/menus/MenuGameOver.tscn"
 
 [node name="Player" parent="." index="3"]
@@ -53,3 +54,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 7.5, -5 )
 
 [node name="Portal" parent="." index="10"]
 transform = Transform( 1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -4.5, 4.5, -10.5 )
+
+[editable path="Bloques/BloqueCesped"]
