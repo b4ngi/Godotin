@@ -45,7 +45,7 @@ func cargar_hilo(nivel: String) -> void:
 	#print(recurso)
 
 func carga_completa(recurso: Resource) -> void:
-	texto_completo.visible = true
+	$AnimationPlayer.play("titilar")
 	hilo.wait_to_finish()
 	escena_precargada = recurso.instance()
 	puede_iniciar = true
@@ -58,6 +58,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_tree().current_scene = escena_precargada
 	
 	barra_progreso.visible = false
+	$AnimationPlayer.stop()
 	texto_completo.visible = false
 	puede_iniciar = false
 	#queue_free()
