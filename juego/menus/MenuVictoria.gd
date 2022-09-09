@@ -2,6 +2,8 @@ extends Control
 
 
 func _ready():
+	MusicaGlobal.musica.stop()
+	$AplausosSFX.play()
 	$Label.text += "%s" %DatosJuego.puntaje
 
 func _on_BotonMenuPrincipal_pressed():

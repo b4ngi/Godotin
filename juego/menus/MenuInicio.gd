@@ -8,6 +8,8 @@ export(String, FILE, "*.tscn") var pantalla_carga = ""
 
 func _ready() -> void:
 	var cargar: GuardarCargar = GuardarCargar.new()
+	if MusicaGlobal.musica.playing == false:
+		MusicaGlobal.replay()
 	if cargar.chequear_existencia_archivo():
 		$ContenedorPrincipal/BotonCargar.disabled = false
 	else:
