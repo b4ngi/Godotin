@@ -3,9 +3,10 @@ extends Control
 
 ## Atributos
 var tips: Array = [
-	"intenta de mantenerte alejado de las sierras",
+	"mantenete alejado de las sierras",
 	"utiliza tu linterna para ver en lugares oscuros",
-	"junta todas las monedas posibles"
+	"junta todas las monedas posibles",
+	"atraviesa los portales para pasar de nivel"
 ]
 
 ## Metodos
