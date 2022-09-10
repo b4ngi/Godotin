@@ -1,17 +1,21 @@
 # CargaSegundoPlano.gd
 extends Control
 
+## Atributos
 var hilo: Thread = null
 var puede_iniciar: bool = false
 var escena_precargada: Node = null
 
+## Atributos onready
 onready var barra_progreso: ProgressBar = $ProgressBar
 onready var texto_completo: Label = $Texto
 
+## Metodos
 func _ready():
 	barra_progreso.visible = false
 	texto_completo.visible = false
 
+## Metodos custom
 func cargar_nivel(nivel: String) -> void:
 	hilo = Thread.new()
 	hilo.start(self, "cargar_hilo", nivel, 2)

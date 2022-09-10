@@ -25,6 +25,3 @@ func get_mezcla_disparar() -> float:
 
 func set_mezcla_disparar(valor: float) -> void:
 	set("parameters/MezclaDisparar/blend_amount", valor)
-
-func _ready():
-	pass

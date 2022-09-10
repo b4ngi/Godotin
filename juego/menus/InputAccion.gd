@@ -2,8 +2,10 @@
 tool
 extends Button
 
+## Atributos export
 export var accion: String
 
+## Atributos
 var traducciones: Dictionary = {
 	"Space": "espacio",
 	"Up": "flecha arriba",

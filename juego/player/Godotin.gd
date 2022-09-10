@@ -107,6 +107,3 @@ func respawn() -> void:
 # warning-ignore:return_value_discarded
 	if continua_el_juego:
 		get_tree().reload_current_scene()
-
-func _ready():
-	pass # Replace with function body.

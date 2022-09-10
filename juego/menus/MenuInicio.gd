@@ -2,10 +2,12 @@
 tool
 extends Control
 
+## Atributos export
 export(String, FILE, "*.tscn") var menu_ajustes = ""
 export(String, FILE, "*.tscn") var nivel_inicial = ""
 export(String, FILE, "*.tscn") var pantalla_carga = ""
 
+## Metodos
 func _ready() -> void:
 	var cargar: GuardarCargar = GuardarCargar.new()
 	if MusicaGlobal.musica.playing == false:
@@ -15,6 +17,12 @@ func _ready() -> void:
 	else:
 		$ContenedorPrincipal/BotonCargar.disabled = true
 
+func _get_configuration_warning() -> String:
+	if menu_ajustes == "":
+		return "Chequear rutas"
+	return ""
+
+## Seniales internas
 func _on_BotonSalir_pressed() -> void:
 	get_tree().quit()
 
@@ -34,8 +42,3 @@ func _on_BotonCargar_pressed():
 	var cargar: GuardarCargar = GuardarCargar.new()
 	cargar.cargar_datos_juego()
 	get_tree().change_scene(pantalla_carga)
-
-func _get_configuration_warning() -> String:
-	if menu_ajustes == "":
-		return "Chequear rutas"
-	return ""

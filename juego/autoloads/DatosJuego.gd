@@ -33,6 +33,3 @@ func restar_vidas() -> bool:
 func sumar_monedas():
 	monedas_oro += 1
 	Eventos.emit_signal("actualizar_hud")
-
-func _ready():
-	pass

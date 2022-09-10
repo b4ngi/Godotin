@@ -2,9 +2,7 @@
 class_name Sierra
 extends Area
 
-func _ready():
-	pass
-
+## Seniales internas
 func _on_body_entered(body):
 	var player: Godotin = body
 	player.respawn()

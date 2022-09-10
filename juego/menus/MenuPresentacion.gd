@@ -2,6 +2,7 @@
 tool
 extends Control
 
+## Atributos export
 export(String, FILE, "*.tscn") var menu_inicial = ""
 
 ## Metodos
@@ -16,5 +17,6 @@ func _get_configuration_warning() -> String:
 		return "No hay menu inicial asignado"
 	return ""
 
+## Metodos custom
 func cargar_menu() -> void:
 	get_tree().change_scene(menu_inicial)

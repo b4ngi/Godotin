@@ -1,8 +1,10 @@
 extends Control
 
+## Atributos export
 export(String, FILE, "*.tscn") var menu_ajustes = ""
 export(String, FILE, "*.tscn") var menu_inicio = ""
 
+## Metodos
 func _ready():
 	visible = false
 
@@ -15,6 +17,7 @@ func _input(event):
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+## Seniales internas
 func _on_BotonContinuar_pressed():
 	get_tree().paused = false
 	visible = false
