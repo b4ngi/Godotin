@@ -24,5 +24,9 @@ Bugs:
 	- Existen bugs con la camara en algunos niveles.
 	- Existen bugs con el guardado y cargado de datos en algunos casos.
 
-Aclaraciones
+Aclaraciones:
 	- Los diseños y estilos de los menus son muy basicos -> Mejorarlos en versiones posteriores.
+
+Ejecutables:
+	- El .exe en "release" presenta fallas. En debug desde el editor funciona perfectamente, pero al exportarlo, el juego no pasa de la pantalla de carga del nivel. Intente arreglarlo pero no encontre la solución --> Pienso que hay problemas con los archivos de guardar/cargar. Una posibilidad tambíen es la carga en segundo plano, pero intente crear el ejecutable sin la carga en segundo plano y tampoco funcionaba.
+	- Por esta razón, decidí hacer los ejecutables en el proyecto Meteoritos y subir ese juego a itch.io(Leer el README de dicho proyecto)
